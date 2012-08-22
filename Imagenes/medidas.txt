@@ -1,0 +1,3 @@
+naves = 100x100
+bala = 10x18
+fondo = 800x600
