@@ -1,0 +1,4 @@
+vol_fx = 0.5
+vol_musica = 0.3 
+vol_musica_menu = 0.7
+nivel = 2
