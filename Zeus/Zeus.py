@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: UTF-8 -*- 
+# -*- coding: UTF-8 -*-
 
 import pygame
 from pygame.locals import *
@@ -8,7 +8,7 @@ from Nave import Nave, Bala
 from Graficos import Barra_de_estado, Pausa, Boton, Menu
 
 import random, os
-import sys
+import s
 import time
 
 import gc
@@ -41,12 +41,12 @@ SEGOE_PRINT = DIRECTORIO_ZEUS+"Fuentes/segoepr.ttf"
 # Colores
 AZUL = (0, 0, 225)
 
-# Otros 
+# Otros
 TIEMPO_ACTUALIZACION_DE_JOYSTICKS = 5
 
 class Zeus():
 
-	def __init__(self): 
+	def __init__(self):
 		self.nave = None
 		self.fondo = None
 		self.menu = None
@@ -175,7 +175,7 @@ class Zeus():
 			imagen = pygame.image.load(NIVELES[self.get_configuracion("nivel")])
 			fondo.blit(imagen, (0,0))
 
-		elif tipo == "menu": 
+		elif tipo == "menu":
 			imagen = pygame.image.load(WALLPAPER_2)
 			fondo.blit(imagen, POS_IMG)
 
@@ -270,16 +270,16 @@ class Zeus():
 		return int(self.tiempo)
 
 	def set_pausa(self):
-		if not self.pausa: 
+		if not self.pausa:
 			self.pausa = True
 			self.dialogo_pausa = Pausa(self)
 
 			self.sprites.add(self.dialogo_pausa)
 
-		elif self.pausa: 
+		elif self.pausa:
 			self.dialogo_pausa.escape()
 
-	def actualizar(self): 
+	def actualizar(self):
 
 		self.tiempo += 0.032
 
@@ -292,7 +292,7 @@ class Zeus():
 	def actualizar_graficos(self, sprites=True):
 		cambios=[]
 
-		if self.estado == "en_juego": 
+		if self.estado == "en_juego":
 			self.pos_fondo += 1
 			self.fondo = self.get_fondo(tipo = "en_juego")
 

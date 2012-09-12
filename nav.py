@@ -67,10 +67,9 @@ class Nav():
         self.naves_enemigas = pygame.sprite.Group()
         self.balas = pygame.sprite.Group()
         self.balas_enemigas = pygame.sprite.Group()
-        self.fuente = pygame.font.Font(None,48)
+        self.fuente = pygame.font.Font(None, 48)
         #self.lluvia = 100
         #self.meteoritos = pygame.sprite.Group()
-
 
         #pygame.mixer.music.load(os.path.join(SONIDO, "Zeropage-Trance_Etude_2.mp3")) MP3 no sopórtado por pygame
         #pygame.mixer.music.play(-1,0)
@@ -83,7 +82,7 @@ class Nav():
         pygame.mouse.set_visible(False)
 
         self.estado = True
-        self.cronometro = 5*self.NIVEL
+        self.cronometro = 5 * self.NIVEL
 
 
     def ejecutar(self):
